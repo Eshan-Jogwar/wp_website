@@ -1,0 +1,134 @@
+/* Background and layout */
+.page-bg-markstracker {
+  background-color: #edf0f6; /* Lighter bluish-gray tone */
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container-markstracker {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Title */
+.title-markstracker {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.title-markstracker h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Info Cards */
+.info-cards-markstracker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-markstracker {
+  background-color: #a08dfb;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bold-markstracker {
+  font-weight: bold;
+}
+
+/* Input field */
+.form-group-markstracker {
+  margin-bottom: 1.5rem;
+}
+
+.form-group-markstracker label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group-markstracker input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
+}
+
+/* Table */
+.table-wrapper-markstracker {
+  overflow-x: auto;
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25),
+              0px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.marks-table-markstracker {
+  width: 100%;
+  background-color: #e1e1ea;
+  border-collapse: collapse;
+}
+
+.marks-table-markstracker th {
+  background-color: #a08dfb;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.marks-table-markstracker td {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #111;
+  border-top: 1px solid #d6d6e0;
+}
+
+/* Buttons */
+.button-group-markstracker {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.btn-outline-markstracker {
+  background-color: white;
+  color: #8b5cf6;
+  border: 2px solid #8b5cf6;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-markstracker:hover {
+  background-color: #f5f3ff;
+}
+
+.btn-filled-markstracker {
+  background-color: #8b5cf6;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-filled-markstracker:hover {
+  background-color: #7a4cf3;
+}
