@@ -5,10 +5,16 @@ const NavBar = ({ setWebMode, webMode }) => {
                     <h1>Academic Tracker</h1>
                     <nav>
                       <button href="HomePage" className="nav-button" onClick={() => {setWebMode("home")}}>HomePage</button>
-                      <button href="MarksTracker" className="nav-button" onClick={() => {setWebMode("markstracker")}}>Marks Tracker</button>
-                      <button href="ScopeOfImprovement" className="nav-button" onClick={() => {setWebMode()}}>Scope Of Improvement</button>
-                      <button href="AttendanceTracker" className="nav-button" onClick={() => {setWebMode()}}>Attendance Tracker</button>
-                      <button href="TimeTable" className="nav-button" onClick={() => {setWebMode("timetable")}}>Time Table</button>
+                      <select
+                        className="nav-button pill-dropdown"
+                        onChange={(e) => setWebMode(e.target.value)}
+                        defaultValue=""
+                    >
+                        <option value="" disabled>Features</option>
+                        <option value="markstracker">Marks Tracker</option>
+                        <option value="attendance">Attendance Tracker</option>
+                        <option value="timetable">Time Table</option>
+                    </select>
                       <button href="AboutPage" className="nav-button" onClick={() => {setWebMode()}}>AboutPage</button>
                     </nav>
                 </div>
