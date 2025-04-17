@@ -1,14 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f7fafc;
+  background-color: #FAF5E9;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #FAF5E9;
   padding: 16px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -21,14 +21,19 @@ header {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
-  color: #065f46;
+  color: black;
+  
 }
 
 .nav-button {
-  background-color: #e2e8f0;
-  color: #2d3748;
+  background-color:#6ed46e;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+  color: black;
+  font-weight: bold;
+  border: none;
+  display: inline-block;
   padding: 8px 16px;
   border-radius: 9999px;
   text-decoration: none;
@@ -40,18 +45,23 @@ h1 {
 }
 
 .nav-button:hover {
-  background-color: #cbd5e0;
+  background-color: #009B4D;
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+  color: black;
 }
 
 main {
-  background-color: #48bb78;
+  background-color: #009B4D;
   text-align: center;
   padding: 32px 0;
-  color: #ffffff;
+  color: #FAF5E9;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 main h2 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -77,19 +87,32 @@ section {
 }
 
 .card {
-  background-color: #edf2f7;
+  background-color: #009B4D;
+  color: #FAF5E9;
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card :hover{
+  transform: scale(1.05);
 }
 
 .card h3 {
-  background-color: #a0aec0;
-  color: #ffffff;
-  padding: 8px 16px;
+
+  background: linear-gradient(to bottom, #54bb54 30%, #FAF5E9 90%);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+  background-color: #72f472;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
   border-radius: 9999px;
   display: inline-block;
   margin-bottom: 16px;
+}
+
+.card h3 :hover{
+  transform: scale(1.05);
 }
 
 .card ul {
@@ -98,7 +121,7 @@ section {
 }
 
 body {
-  background-color: white;
+  background-color: #FAF5E9;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -181,15 +204,17 @@ th.highlight {
 }
 
 .developer-info {
-  background-color: #f8f9fa; 
-  color: #6c757d; 
-  font-size: 14px; 
+  background-color: #009B4D; 
+  color: #FAF5E9; 
+  font-size: 14px;
+  padding: 10px; 
   text-align: center; 
   padding: 10px;
   position: relative;
   bottom: 0;
   width: 100%;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
   z-index: 10;
 }
 
@@ -212,7 +237,7 @@ th.highlight {
 
 .divider-bar {
   height: 5px;
-  background-color: #d8350f;
+  background-color: #009B4D;
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -265,15 +290,20 @@ th.highlight {
 
 .legend-box {
   margin-top: 20px;
-  background-color: #f1582d;
-  color: white;
+  background-color: #54bb54;
+  color: black;
   padding: 15px 20px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: bold;
   width: fit-content;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.2);
 }
 
+.legend-box :hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 .legend-list {
   list-style: none;
   padding: 0;
@@ -291,19 +321,21 @@ th.highlight {
 
 .edit-button {
   padding: 8px 16px;
-  background-color: #4CAF50; /* Green background */
-  color: white;
+  background-color: #4CAF50; 
+  background: linear-gradient(to bottom, #54bb54 40%, #FAF5E9 100%);
+  color: black;
   border: none;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .edit-button:hover {
   background-color: #45a049;
+  transform: scale(1.05);
 }
 
 .edit-button:active {

@@ -1,6 +1,6 @@
-/* Background and layout */
+
 .page-bg-markstracker {
-  background-color: #edf0f6; /* Lighter bluish-gray tone */
+  background-color: #FAF5E9; 
   min-height: 100vh;
   padding: 1rem;
 }
@@ -10,19 +10,19 @@
   margin: auto;
 }
 
-/* Title */
+
 .title-markstracker {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
 .title-markstracker h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
   color: #333;
 }
 
-/* Info Cards */
+
 .info-cards-markstracker {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -31,14 +31,20 @@
 }
 
 .card-markstracker {
-  background-color: #a08dfb;
-  color: white;
+  background-color: #54bb54 ;
+  color: #FAF5E9;
   padding: 1rem;
+  font-weight: bold;
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-markstracker:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
 .bold-markstracker {
@@ -53,7 +59,8 @@
 .form-group-markstracker label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: black;
+  font-weight: 700;
 }
 
 .form-group-markstracker input {
@@ -61,7 +68,7 @@
   padding: 0.5rem;
   border: none;
   border-radius: 0.75rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   font-size: 1rem;
 }
 
@@ -74,13 +81,13 @@
 
 .marks-table-markstracker {
   width: 100%;
-  background-color: #e1e1ea;
+  background-color: #54bb54;
   border-collapse: collapse;
 }
 
 .marks-table-markstracker th {
-  background-color: #a08dfb;
-  color: white;
+  background-color:#009B4D;
+  color: black;
   padding: 0.75rem 1rem;
   text-align: left;
   font-size: 1rem;
@@ -90,11 +97,11 @@
   text-align: center;
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
-  color: #111;
+  color: #FAF5E9;
   border-top: 1px solid #d6d6e0;
 }
 
-/* Buttons */
+
 .button-group-markstracker {
   display: flex;
   justify-content: space-between;
@@ -102,13 +109,13 @@
 }
 
 .btn-outline-markstracker {
-  background-color: white;
-  color: #8b5cf6;
-  border: 2px solid #8b5cf6;
+  background-color: #72f472;
+  color: black;
+  border: 2px solid #009B4D;
   padding: 0.5rem 1.2rem;
   border-radius: 0.75rem;
-  font-weight: 500;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
@@ -118,17 +125,19 @@
 }
 
 .btn-filled-markstracker {
-  background-color: #8b5cf6;
-  color: white;
+  background-color: #72f472;
+  color: black;
   padding: 0.5rem 1.2rem;
   border: none;
   border-radius: 0.75rem;
-  font-weight: 500;
+  font-weight: 569;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .btn-filled-markstracker:hover {
-  background-color: #7a4cf3;
+  background-color: #009B4D;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
