@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import MarksTracker from './components/marksTracker'
 import "./marksTracker.css"
 import Attendance from './components/Attendance'
+import  SignIn from './components/loginComponent'
 function renderWebsite(mode){
   switch (mode) {
     case "home":
@@ -21,6 +22,10 @@ function renderWebsite(mode){
     
     case "markstracker":
       return <MarksTracker />
+      break;
+
+    case "SignIn":
+      return <SignIn />
       break;
   }
 }

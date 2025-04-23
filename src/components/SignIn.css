@@ -1,0 +1,49 @@
+
+.container-signin {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+
+.heading-signin {
+    text-align: center;
+    color: #388e3c;
+}
+
+.input-signin {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #c8e6c9;
+    border-radius: 4px;
+}
+
+.button-signin {
+    background-color: #388e3c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button-signin:hover {
+    background-color: #2e7d32;
+}
+
+.footer-signin {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.wrapper-container{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
