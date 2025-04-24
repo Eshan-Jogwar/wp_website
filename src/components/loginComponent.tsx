@@ -30,10 +30,14 @@ export default function SignIn( {setRole, username, setUsername, setWebMode} ) {
         setRole(data.user.role);
         setErrorMessage("");  // Clear any previous error messages
         setWebMode("home");
+        setUsername(data.user.email);
+        setPassword("");
         console.log("Role from API:", data.user.role);
       } else {
         // If there was an error, show the error message
         setErrorMessage(data.msg || "Login failed");
+        setUsername("");
+        setPassword("");
       }
     } catch (error) {
       setErrorMessage("An error occurred. Please try again later.");

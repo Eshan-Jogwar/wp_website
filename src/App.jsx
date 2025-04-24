@@ -37,7 +37,9 @@ function App() {
   return (
     <>
       <NavBar setWebMode={setWebMode} webMode={webMode} role={role}/>
-      {webMode == "SignIn" ? <SignIn setRole={setRole} setUsername={setUsername} username={username} setWebMode={setWebMode}/> : renderWebsite(webMode, role)}
+      {webMode == "SignIn" ? (<SignIn setRole={setRole} setUsername={setUsername} username={username} setWebMode={setWebMode}/>) 
+      : webMode == "markstracker" ? <MarksTracker Username={username}/>
+      : renderWebsite(webMode, role)}
     </>
   )
 }

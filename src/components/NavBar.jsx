@@ -20,7 +20,7 @@ const NavBar = ({ setWebMode, webMode, role }) => {
                       <button className="nav-button" style={{background: "white"}} onClick={() => setWebMode("SignIn")}>UserType: {role}</button>
                     </nav>
                 </div>
-                <div class="developer-info">
+                <div className="developer-info">
                     Developed by ESHAN JOGWAR, ATHARV DESHMUKH, SAHIL KURIL
                 </div>
         </header>
