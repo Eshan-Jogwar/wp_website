@@ -1,4 +1,4 @@
-const NavBar = ({ setWebMode, webMode }) => {
+const NavBar = ({ setWebMode, webMode, role }) => {
     return (
         <header>
                 <div className="container">
@@ -17,6 +17,7 @@ const NavBar = ({ setWebMode, webMode }) => {
                         <option value="SignIn">Sign In</option>
                     </select>
                       <button href="AboutPage" className="nav-button" onClick={() => {setWebMode()}}>AboutPage</button>
+                      <button className="nav-button" style={{background: "white"}} onClick={() => setWebMode("SignIn")}>UserType: {role}</button>
                     </nav>
                 </div>
                 <div class="developer-info">

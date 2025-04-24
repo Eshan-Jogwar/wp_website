@@ -7,7 +7,7 @@ import MarksTracker from './components/marksTracker'
 import "./marksTracker.css"
 import Attendance from './components/Attendance'
 import  SignIn from './components/loginComponent'
-function renderWebsite(mode){
+function renderWebsite(mode, role = ""){
   switch (mode) {
     case "home":
       return <HomePage />
@@ -25,17 +25,19 @@ function renderWebsite(mode){
       break;
 
     case "SignIn":
-      return <SignIn />
+      return 
       break;
   }
 }
 
 function App() {
   const [webMode, setWebMode] = useState("home");
+  const [role, setRole] = useState("Not Logged In");
+  const [username, setUsername] = useState("");
   return (
     <>
-      <NavBar setWebMode={setWebMode} webMode={webMode}/>
-      {renderWebsite(webMode)}
+      <NavBar setWebMode={setWebMode} webMode={webMode} role={role}/>
+      {webMode == "SignIn" ? <SignIn setRole={setRole} setUsername={setUsername} username={username} setWebMode={setWebMode}/> : renderWebsite(webMode, role)}
     </>
   )
 }
