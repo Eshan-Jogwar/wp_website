@@ -36,7 +36,7 @@ function App() {
       <NavBar setWebMode={setWebMode} webMode={webMode} role={role}/>
       {webMode == "SignIn" ? (<SignIn setRole={setRole} setUsername={setUsername} username={username} setWebMode={setWebMode}/>) 
       : webMode == "markstracker" ? role == "student" ? <MarksTracker Username={username} role={role}/> : <MarksTracker Username={username} role={role}/>
-      : webMode == "AdminStudentList" ? <AdminStudentList setUsername={setUsername} setWebMode={setWebMode}/>
+      : webMode == "AdminStudentList" && role=="admin"? <AdminStudentList setUsername={setUsername} setWebMode={setWebMode}/>
       : renderWebsite(webMode, role)}
     </>
   )

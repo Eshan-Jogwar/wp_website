@@ -10,12 +10,12 @@ const NavBar = ({ setWebMode, webMode, role }) => {
                         onChange={(e) => setWebMode(e.target.value)}
                         defaultValue=""
                     >
-                        <option value="" disabled>Features</option>
+                        <option value="">Features</option>
                         <option value={(role == "student") ? "markstracker" : "AdminStudentList"}>Marks Tracker</option>
                         <option value="attendance">Attendance Tracker</option>
                         <option value="timetable">Time Table</option>
                     </select>
-                      <button href="AboutPage" className="nav-button" onClick={() => {setWebMode()}}>AboutPage</button>
+                      {/* <button href="AboutPage" className="nav-button" onClick={() => {setWebMode()}}>AboutPage</button> */}
                       <button className="nav-button" style={{background: "white"}} onClick={() => setWebMode("SignIn")}>UserType: {role}</button>
                     </nav>
                 </div>
