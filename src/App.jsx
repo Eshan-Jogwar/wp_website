@@ -7,6 +7,7 @@ import MarksTracker from './components/marksTracker'
 import "./marksTracker.css"
 import Attendance from './components/Attendance'
 import  SignIn from './components/loginComponent'
+import AdminStudentList from './components/AdminStudentList'
 function renderWebsite(mode, role = ""){
   switch (mode) {
     case "home":
@@ -19,10 +20,6 @@ function renderWebsite(mode, role = ""){
 
     case "attendance":
       return <Attendance />
-    
-    case "markstracker":
-      return <MarksTracker role={role}/>
-      break;
 
     case "SignIn":
       return 
@@ -38,7 +35,8 @@ function App() {
     <>
       <NavBar setWebMode={setWebMode} webMode={webMode} role={role}/>
       {webMode == "SignIn" ? (<SignIn setRole={setRole} setUsername={setUsername} username={username} setWebMode={setWebMode}/>) 
-      : webMode == "markstracker" ? role == "student" ? <MarksTracker Username={username}/> : <MarksTracker Username={username}/>
+      : webMode == "markstracker" ? role == "student" ? <MarksTracker Username={username} role={role}/> : <MarksTracker Username={username} role={role}/>
+      : webMode == "AdminStudentList" ? <AdminStudentList setUsername={setUsername} setWebMode={setWebMode}/>
       : renderWebsite(webMode, role)}
     </>
   )

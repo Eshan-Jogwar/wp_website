@@ -11,7 +11,7 @@ const NavBar = ({ setWebMode, webMode, role }) => {
                         defaultValue=""
                     >
                         <option value="" disabled>Features</option>
-                        <option value="markstracker">Marks Tracker</option>
+                        <option value={(role == "student") ? "markstracker" : "AdminStudentList"}>Marks Tracker</option>
                         <option value="attendance">Attendance Tracker</option>
                         <option value="timetable">Time Table</option>
                     </select>

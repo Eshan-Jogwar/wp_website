@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { dataUrl } from "../Links"; // update if needed
+import { studentLink } from "./Links"; // update if needed
 
 const AdminStudentList = ({ setWebMode, setUsername }) => {
   const [students, setStudents] = useState([]);
@@ -7,10 +7,9 @@ const AdminStudentList = ({ setWebMode, setUsername }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch(`${dataUrl}users`);
+        const res = await fetch(studentLink);
         const data = await res.json();
-        const studentList = data.filter(user => user.role === "student");
-        setStudents(studentList);
+        setStudents(data.students);
       } catch (err) {
         console.error("Error fetching students:", err);
       }
@@ -29,7 +28,7 @@ const AdminStudentList = ({ setWebMode, setUsername }) => {
       <ul>
         {students.map((student, index) => (
           <li
-            key={index}
+            key={Date.now() + Math.random() * 200}
             style={{
               cursor: "pointer",
               padding: "8px",

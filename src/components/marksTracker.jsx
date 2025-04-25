@@ -122,6 +122,7 @@ const MarksTracker = ({ Username, role }) => {
             index={index}
             onRemove={handleRemoveReport}
             onUpdate={handleUpdateReport}
+            role={role}
           />
         ))}
 
