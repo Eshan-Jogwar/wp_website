@@ -57,7 +57,7 @@ const MarksTracker = ({ Username }) => {
       const updatedTables = [...prevTables, newReport];
       return updatedTables;
     });
-    handleChange(); // Send updated tables to the server
+    handleChange();
   };
 
   const handleRemoveReport = (index) => {
@@ -65,7 +65,7 @@ const MarksTracker = ({ Username }) => {
       const updatedTables = prevTables.filter((_, i) => i !== index);
       return updatedTables;
     });
-    handleChange(); // Send updated tables to the server
+    handleChange();
   };
 
   const handleUpdateReport = (index, updatedData) => {
@@ -74,7 +74,7 @@ const MarksTracker = ({ Username }) => {
       updatedTables[index] = updatedData;
       return updatedTables;
     });
-    handleChange(); // Send updated tables to the server
+    handleChange(); 
   };
 
   return userInfo ? (
