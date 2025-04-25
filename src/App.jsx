@@ -15,7 +15,7 @@ function renderWebsite(mode, role = ""){
       break;
     
     case "timetable":
-      return <TimeTablePage />
+      return <TimeTablePage role={role}/>
       break;
 
     case "attendance":

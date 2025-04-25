@@ -126,11 +126,14 @@ const MarksTracker = ({ Username, role }) => {
           />
         ))}
 
-        <div className="button-group-markstracker">
+        {
+          (role == "admin") ? 
+          <div className="button-group-markstracker">
           <button className="btn-filled-markstracker" onClick={handleAddReport}>
             Add Report
           </button>
-        </div>
+          </div> : ""
+        }
       </div>
     </div>
   ) : (

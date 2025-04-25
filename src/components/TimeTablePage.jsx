@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const TimeTablePage = () => {
+const TimeTablePage = ( {role} ) => {
   const [timetable, setTimetable] = useState([]);
   const [editing, setEditing] = useState(false);
   
@@ -45,11 +45,14 @@ const TimeTablePage = () => {
       </div>
       <div className="divider-bar"></div>
 
-      <div style={{ margin: "10px 0", display: "flex", justifyContent: "flex-end" }}>
+      {
+        (role == "admin") ? 
+        <div style={{ margin: "10px 0", display: "flex", justifyContent: "flex-end" }}>
         <button onClick={toggleEditing} className="edit-button">
           {editing ? "Save" : "Edit"}
         </button>
-      </div>
+        </div> : ""
+      }
 
       <div className="content">
         <table className="table-wrapper">
