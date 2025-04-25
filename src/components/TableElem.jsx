@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TableElem = ({ data, index, onRemove, onUpdate }) => {
+const TableElem = ({ data, index, onRemove, onUpdate, role }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [editedData, setEditedData] = useState(data);
   
@@ -27,7 +27,7 @@ const TableElem = ({ data, index, onRemove, onUpdate }) => {
         }}
       >
         <div style={{ position: "absolute", top: "10px", right: "10px", display: "flex", gap: "10px" }}>
-          {isEditing ? (
+          {(role == 'admin') ? isEditing ? (
             <button
               onClick={handleUpdate}
               style={{
@@ -55,8 +55,8 @@ const TableElem = ({ data, index, onRemove, onUpdate }) => {
             >
               Edit
             </button>
-          )}
-          <button
+          ) : console.log()}
+          {(role == "admin") ? <button
             onClick={() => onRemove(index)}  // This triggers the removal in the parent
             style={{
               border: "none",
@@ -68,7 +68,7 @@ const TableElem = ({ data, index, onRemove, onUpdate }) => {
             }}
           >
             ✖
-          </button>
+          </button> : console.log()}
         </div>
         <table className="marks-table-markstracker">
           <thead>

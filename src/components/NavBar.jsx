@@ -14,7 +14,6 @@ const NavBar = ({ setWebMode, webMode, role }) => {
                         <option value="markstracker">Marks Tracker</option>
                         <option value="attendance">Attendance Tracker</option>
                         <option value="timetable">Time Table</option>
-                        <option value="SignIn">Sign In</option>
                     </select>
                       <button href="AboutPage" className="nav-button" onClick={() => {setWebMode()}}>AboutPage</button>
                       <button className="nav-button" style={{background: "white"}} onClick={() => setWebMode("SignIn")}>UserType: {role}</button>

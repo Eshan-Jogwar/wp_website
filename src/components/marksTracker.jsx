@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TableElem from "./TableElem"; // assuming it's in the same folder or adjust the path accordingly
 import { dataUrl } from "./Links";
 
-const MarksTracker = ({ Username }) => {
+const MarksTracker = ({ Username, role }) => {
   const [tables, setTables] = useState([]);
   const [userInfo, setUserInfo] = useState(null);
 

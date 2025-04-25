@@ -21,7 +21,7 @@ function renderWebsite(mode, role = ""){
       return <Attendance />
     
     case "markstracker":
-      return <MarksTracker />
+      return <MarksTracker role={role}/>
       break;
 
     case "SignIn":
@@ -38,7 +38,7 @@ function App() {
     <>
       <NavBar setWebMode={setWebMode} webMode={webMode} role={role}/>
       {webMode == "SignIn" ? (<SignIn setRole={setRole} setUsername={setUsername} username={username} setWebMode={setWebMode}/>) 
-      : webMode == "markstracker" ? <MarksTracker Username={username}/>
+      : webMode == "markstracker" ? role == "student" ? <MarksTracker Username={username}/> : <MarksTracker Username={username}/>
       : renderWebsite(webMode, role)}
     </>
   )
